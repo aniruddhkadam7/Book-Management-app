@@ -12,6 +12,73 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Spring Boot version for consistency -->
+        <spring-boot.version>3.1.5</spring-boot.version>
     </properties>
-    
+
+    <dependencies>
+        <!-- 1. Spring Boot Starter Web: For REST API development -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.4.5</version>
+            <!-- Why? Adds Spring MVC, embedded Tomcat, and JSON support -->
+        </dependency>
+
+        <!-- 2. Spring Data JPA: For database operations (CRUD) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>3.4.5</version>
+            <!-- Why? Simplifies database access with repositories (e.g., JpaRepository) -->
+        </dependency>
+
+        <!-- 3. MySQL Connector: To connect to MySQL database -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+            <scope>runtime</scope>
+            <!-- Why? Required if you use MySQL; runtime means it's only needed during execution -->
+        </dependency>
+
+        <!-- 4. Lombok: To reduce boilerplate code (getters/setters) -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>provided</scope>
+            <!-- Why? Auto-generates getters, setters, constructors with annotations like @Data -->
+        </dependency>
+
+        <!-- 5. Spring Boot Starter Test: For unit/integration testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.4.5</version>
+            <scope>test</scope>
+            <!-- Why? Includes JUnit, Mockito, and Spring Test utilities -->
+        </dependency>
+
+        <!-- 6. H2 Database (Optional): For in-memory testing -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.3.232</version>
+            <scope>runtime</scope>
+            <!-- Why? Lightweight database for development/testing without MySQL -->
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 7. Spring Boot Maven Plugin: To run the app easily -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.4.5</version>
+                <!-- Why? Enables "mvn spring-boot:run" and creates executable JARs -->
+            </plugin>
+        </plugins>
+    </build>
 </project>
