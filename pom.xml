@@ -60,6 +60,13 @@
             <!-- Why? Includes JUnit, Mockito, and Spring Test utilities -->
         </dependency>
 
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+
         <!-- 6. H2 Database (Optional): For in-memory testing -->
         <dependency>
             <groupId>com.h2database</groupId>
