@@ -12,7 +12,7 @@ import java.util.Set;
 @Table(name = "books",
         indexes = {
                 @Index(name = "idx_book_title", columnList = "title"),
-                @Index(name = "idx_book_isbn", columnList = "isbn", unique = true) //dddddddd
+                @Index(name = "idx_book_isbn", columnList = "isbn", unique = true) //dddddddddd
         })
 @Getter
 @Setter
