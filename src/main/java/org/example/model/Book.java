@@ -14,6 +14,7 @@ import java.util.Set;
                 @Index(name = "idx_book_title", columnList = "title"),
                 @Index(name = "idx_book_isbn", columnList = "isbn", unique = true)
         })
+
 @Getter
 @Setter
 @NoArgsConstructor
