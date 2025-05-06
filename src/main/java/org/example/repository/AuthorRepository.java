@@ -29,7 +29,7 @@ public interface AuthorRepository extends BaseRepository<Author, Long> {
      * Custom query to search authors by keyword in biography.
      *
      * @param keyword Search term (case-insensitive partial match)
-     * @return List of authors with biographies containing the keyword //hhhhjjjjjjkkk
+     * @return List of authors with biographies containing the keyword //hhhhjjjjjjkkkhh
      */
     @Query("SELECT a FROM Author a WHERE LOWER(a.biography) LIKE LOWER(CONCAT('%', :keyword, '%'))")
     List<Author> searchByBiographyKeyword(@Param("keyword") String keyword);
