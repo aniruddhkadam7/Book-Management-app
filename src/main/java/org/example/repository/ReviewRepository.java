@@ -18,7 +18,7 @@ public interface ReviewRepository extends BaseRepository<Review, Long> {
     /**
      * Filters reviews by approval status.
      *
-     * @param approved true for approved reviews, false for pending gggdd
+     * @param approved true for approved reviews, false for pending gggdddd
      */
     List<Review> findByApproved(boolean approved);
 
