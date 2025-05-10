@@ -6,7 +6,7 @@ import org.springframework.data.repository.NoRepositoryBean;
 import java.util.Optional;
 
 /**
- * Base repository for all entities extending BaseEntity. mmm
+ * Base repository for all entities extending BaseEntity. mmmkk
  * Provides common soft-delete operations.
  *
  * @param <T>  Entity type (e.g., Author, Book)
